@@ -28,7 +28,23 @@ Any override to the standards should go in this file.
 ## Legacy Updates
 
 The following can be used to fix some inconsistencies from our `jshint/jscs`
-projects.
+projects. 
+
+First you need to install `replace`
+
+```
+npm install -g replace
+```
+
+```sh
+
+replace 'function\(' 'function (' . -r --include='*.js' --exclude='node_modules,vendor'
+replace 'function\s([^\s]+?)\(' 'function $1 (' . -r --include='*.js' --exclude='node_modules,vendor'
+replace '\(\s([^ ])' '($1' . -r --include='*.js' --exclude='node_modules,vendor'
+replace '([^\s\n])\s+\)' '$1)' . -r --include='*.js' --exclude='node_modules,vendor'
+replace 'jshint camelcase: false' 'eslint camelcase: [2, {properties: "never"}]' . -r --include='*.js' --exclude='node_modules,vendor'
+ 
+replace '=\s\s+(.)' '= $1' . -m false -r --include='*.js' --exclude='node_modules,vendor'
 
 ```
 /function\s([^\s]+?)\(/ to function $1 (
@@ -42,4 +58,5 @@ projects.
 ',function' to ', function'
 
 \/\* jshint maxcomplexity: (\d+) */ to /* eslint complexity: [ 2, $1 ] */
+'jshint camelcase: false' 'eslint camelcase: false'
 ```
