@@ -10,9 +10,10 @@ standard have defined.
 In your project folder:
 
 ```
+npm install --save-dev eslint@2.3.0
 npm install --save-dev eslint-config-clock
-npm install --save-dev eslint-config-standard
-npm install --save-dev eslint-plugin-standard
+npm install --save-dev eslint-config-standard@5.1.0
+npm install --save-dev eslint-plugin-standard@1.3.1
 ```
 
 Then create a `.eslintrc` in the project root.
@@ -58,5 +59,4 @@ replace '=\s\s+(.)' '= $1' . -m false -r --include='*.js' --exclude='node_module
 ',function' to ', function'
 
 \/\* jshint maxcomplexity: (\d+) */ to /* eslint complexity: [ 2, $1 ] */
-'jshint camelcase: false' 'eslint camelcase: false'
 ```
