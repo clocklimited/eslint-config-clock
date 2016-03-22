@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-clock",
   "description": " Clock JavaScript Coding Standard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
   },
