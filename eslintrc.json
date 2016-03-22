@@ -18,6 +18,7 @@
     "max-nested-callbacks": [ 2, 10 ],
     "max-params": [ 2, 7 ],
     "max-statements": [ 2, 25 ],
+    "no-path-concat": 0,
     "no-unused-vars": [ 2, "all" ],
     "one-var": [ 2, "always" ],
     "padded-blocks": 0,
