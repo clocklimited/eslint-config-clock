@@ -1,5 +1,7 @@
 # Clock JavaScript Coding Standard
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/eslint-config-clock.svg)](https://greenkeeper.io/)
+
 This is an extension of standard minus the comma first and multi vars. We'd have
 loved to stick with standard 100% but we have a lot of active legacy projects
 and with this minor change we were able to easily nick all the good stuff that
